@@ -13,19 +13,14 @@ const Header = () => {
                 <Container>
                     <div>
                     <img src="" alt="" />
-                    <Navbar.Brand><Link to='/'>Language For Code</Link></Navbar.Brand>
+                    <Navbar.Brand>Language For Code</Navbar.Brand>
                     </div>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
-                        <Nav className="me-auto">
-                            <Nav.Link href="#features">Courses</Nav.Link>
-                            <Nav.Link href="#pricing">FAQ</Nav.Link>
-                            <Nav.Link href="#deets">Blog</Nav.Link>
-                        </Nav>
-                        <Nav>
-                            <Nav.Link eventKey={2} href="#memes">
-                                Dank 
-                            </Nav.Link>
+                        <Nav className="">
+                            <Link className='mx-2' to='/'>Courses</Link>
+                            <Link>FAQ</Link>
+                            <Link className='mx-2'>Blog</Link>
                         </Nav>
                         <div className='d-lg-none'>
                             <LeftSideNav></LeftSideNav>
