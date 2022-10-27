@@ -1,5 +1,6 @@
 import React from 'react';
 import { useContext } from 'react';
+import { Image } from 'react-bootstrap';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
@@ -7,6 +8,7 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../../contexts/AuthProvider/AuthProvider';
 import LeftSideNav from '../LeftSideNav/LeftSideNav';
+import { FaUserAlt } from "react-icons/fa";
 
 const Header = () => {
     const { user, logOut} = useContext(AuthContext)
@@ -15,7 +17,7 @@ const Header = () => {
             <Navbar collapseOnSelect className='mb-4' expand="lg" bg="light" variant="light">
                 <Container>
                     <div>
-                        <img src="" alt="" />
+                        <img style={{height:'40px'}} src="https://www.clipartmax.com/png/small/184-1841721_web-development-web-design-logo-download-logo-website-png.png" alt="" />
                         <Navbar.Brand>Language For Code</Navbar.Brand>
                     </div>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
@@ -38,6 +40,7 @@ const Header = () => {
                                         </>
 
                                 }
+                                <p>{user.photoURL}</p>
                             </Nav>
                         </div>
                         <div className='d-lg-none'>

@@ -6,7 +6,7 @@ const Home = () => {
     const allCourse = useLoaderData();
     return (
         <div>
-            this is home:{allCourse.length}
+            
             {
                 allCourse.map(course =><CourseCard 
                 key={course._id}

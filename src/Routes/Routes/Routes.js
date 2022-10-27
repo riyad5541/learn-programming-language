@@ -6,6 +6,7 @@ import Course from "../../Pages/Course/Course";
 import CourseCategories from "../../Pages/CourseCategories/CourseCategories";
 import Home from "../../Pages/Home/Home";
 import Login from "../../Pages/Login/Login/Login";
+
 import Register from "../../Pages/Login/Register/Register";
 import PrivateRoute from "../PrivateRoute";
 
@@ -44,7 +45,8 @@ export const routes = createBrowserRouter([
             {
                 path:'/checkout',
                 element:<PrivateRoute><CheckOut></CheckOut></PrivateRoute>
-            }
+            },
+            
         ]
     }
 ])
