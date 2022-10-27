@@ -27,6 +27,7 @@ const Header = () => {
                                 <Link className='mx-2' to='/'>Courses</Link>
                                 <Link>FAQ</Link>
                                 <Link className='mx-2' to='/blog'>Blog</Link>
+                                <button>Dark mode</button>
                             </Nav>
                             <Nav>
                                 {/* <Nav.Link href='#deets'>{user?.displayName}</Nav.Link> */}
@@ -40,7 +41,7 @@ const Header = () => {
                                         </>
 
                                 }
-                                <p>{user.photoURL}</p>
+                                
                             </Nav>
                         </div>
                         <div className='d-lg-none'>

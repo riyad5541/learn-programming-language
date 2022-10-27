@@ -9,7 +9,7 @@ const Course = () => {
     const {title,details,image_url} = course
     return (
         <Card>
-            <Card.Header><Button variant="primary">Go somewhere</Button></Card.Header>
+            <Card.Header><a href='icons8-java-50.png' download='icons8-java-50.png'><Button variant="primary">Download</Button></a></Card.Header>
             <Card.Body>
                 <Card.Title>{title}</Card.Title>
                 <Card.Title><Card.Img style={{height:'250px'}} variant="top" src={image_url} /></Card.Title>
