@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 const CourseCard = ({ course }) => {
     const {title,_id,image_url,details} = course
-    console.log(course)
+    // console.log(course)
     return (
         <Card className="mb-5">
             <Card.Header>{title}</Card.Header>

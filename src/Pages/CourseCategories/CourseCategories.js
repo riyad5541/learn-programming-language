@@ -7,7 +7,7 @@ const categoryCourses = useLoaderData();
 
     return (
         <div>
-            <h2>thiis  is category has course:{categoryCourses.length}</h2>
+            
             {
                 categoryCourses.map(course =><CourseCard
                 key={course._id}

@@ -12,6 +12,7 @@ import { FaUserAlt } from "react-icons/fa";
 
 const Header = () => {
     const { user, logOut} = useContext(AuthContext)
+    console.log(user)
     return (
         <div>
             <Navbar collapseOnSelect className='mb-4' expand="lg" bg="light" variant="light">
@@ -28,6 +29,7 @@ const Header = () => {
                                 <Link>FAQ</Link>
                                 <Link className='mx-2' to='/blog'>Blog</Link>
                                 <button>Dark mode</button>
+                
                             </Nav>
                             <Nav>
                                 {/* <Nav.Link href='#deets'>{user?.displayName}</Nav.Link> */}

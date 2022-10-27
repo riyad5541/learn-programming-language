@@ -46,6 +46,10 @@ export const routes = createBrowserRouter([
                 path:'/checkout',
                 element:<PrivateRoute><CheckOut></CheckOut></PrivateRoute>
             },
+            {
+                path:'*',
+                element:<div>This route not found: 404</div>
+            }
             
         ]
     }
