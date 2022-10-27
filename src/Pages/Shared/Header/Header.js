@@ -9,7 +9,7 @@ import { AuthContext } from '../../../contexts/AuthProvider/AuthProvider';
 import LeftSideNav from '../LeftSideNav/LeftSideNav';
 
 const Header = () => {
-    const { user } = useContext(AuthContext)
+    const { user, logOut} = useContext(AuthContext)
     return (
         <div>
             <Navbar collapseOnSelect className='mb-4' expand="lg" bg="light" variant="light">
@@ -28,10 +28,17 @@ const Header = () => {
                             </Nav>
                             <Nav>
                                 {/* <Nav.Link href='#deets'>{user?.displayName}</Nav.Link> */}
-                                <p className='mx-2'><Link to={'/login'}>Login</Link></p>
-                                <p><Link to={'/register'}>Register</Link></p>
+                                {
+                                    user?.uid ?
+                                        <p className='mx-2'><Link onClick={logOut}>Log Out</Link></p>
+                                        :
+                                        <>
+                                            <p className='mx-2'><Link to={'/login'}>Login</Link></p>
+                                            <p><Link to={'/register'}>Register</Link></p>
+                                        </>
+
+                                }
                             </Nav>
-                            <p className='mx-2'>{user?.displayName}</p>
                         </div>
                         <div className='d-lg-none'>
                             <LeftSideNav></LeftSideNav>

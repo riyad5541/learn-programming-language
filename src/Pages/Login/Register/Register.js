@@ -1,12 +1,15 @@
 import React from 'react';
+import { useContext } from 'react';
 import { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../../../contexts/AuthProvider/AuthProvider';
 
 const Register = () => {
 
     const [error,setError] = useState(null);
+    const {createUser} = useContext(AuthContext);
 
     const handleSubmit = (event) =>{
         event.preventDefault();
@@ -19,6 +22,13 @@ const Register = () => {
             setError('Password must be 6 characters long');
             return;
         }
+        createUser(email, password)
+        .then(result =>{
+            const user = result.user;
+            console.log(user);
+            form.reset();
+        }) 
+        .catch(erroe => console.error(erroe));
     }
     return (
         <div>
