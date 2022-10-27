@@ -27,10 +27,11 @@ const Header = () => {
                                 <Link className='mx-2' to='/blog'>Blog</Link>
                             </Nav>
                             <Nav>
-                                <Nav.Link href='#deets'>{user?.displayName}</Nav.Link>
+                                {/* <Nav.Link href='#deets'>{user?.displayName}</Nav.Link> */}
                                 <p className='mx-2'><Link to={'/login'}>Login</Link></p>
                                 <p><Link to={'/register'}>Register</Link></p>
                             </Nav>
+                            <p className='mx-2'>{user?.displayName}</p>
                         </div>
                         <div className='d-lg-none'>
                             <LeftSideNav></LeftSideNav>
